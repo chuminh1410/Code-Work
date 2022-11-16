@@ -1,36 +1,4 @@
-function validate() {
-    var u = document.getElementById("username").value;
-    var p1 = document.getElementById("password").value;
 
-    if(u== "") {
-        alert("vui lòng nhập tài khoản")
-    return false;}
-    else if(u=="dangnhapspotify"){
-        
-        
-     
-    }
-    else{
-        alert("thông tin không chính xác")
-        return false;
-    }
-  
-    
-    if(p1 == "") {
-    alert("vui lòng nhập mật khẩu");
-    return false;
-    }
-    else if(p1=="123456789"){
-        window.location.href = '/path'
-        alert("thông tin chính xác!")
-        return true;
-        
-        }
-        else{
-            alert("thông tin không chính xác")
-        }
-        return false;
-    }
     
     function check() {
 
@@ -45,8 +13,9 @@ function validate() {
         // check if stored data from register-form is equal to data from login form
         if(userName.value == storedName && userPw.value == storedPw) {
             alert('You are loged in.');
+            window.location.href = 'http://127.0.0.1:5500/Trang%20Ch%C3%ADnh/index.html'
         }else {
-            alert('ERROR.');
+            alert('Username or password is not correct, please try again.');
         }
     }
   
