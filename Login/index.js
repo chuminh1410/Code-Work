@@ -4,7 +4,7 @@
 
         // stored data from the register-form
         var storedName = localStorage.getItem('name1');
-        var storedPw = localStorage.getItem('pw');
+        var storedPw = localStorage.getItem('pw1');
     
         // entered data from the login-form
         var userName = document.getElementById('userName');
