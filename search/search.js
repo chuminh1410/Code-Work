@@ -2,8 +2,10 @@
 
 document.addEventListener("keyup", function (event) {
     if (event.code === 'Enter') {
+        console.log("abc");
         alert('Đang tìm kiếm bài hát');
         const search = async () => {
+            const data = document.getElementById("search").value
             const options = {
                 method: 'GET',
                 headers: {
@@ -11,28 +13,22 @@ document.addEventListener("keyup", function (event) {
                     'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
                 }
             };
-            const data = document.getElementById("search").value
             var response = ""
-           
-                response = await fetch(`https://spotify81.p.rapidapi.com/search?q=${data}&type=tracks&offset=0&limit=10&numberOfTopResults=5`, options)
+                response = await fetch(`https://spotify23.p.rapidapi.com/search/?q=${data}&type=multi&offset=0&limit=10&numberOfTopResults=5`, options)
+                
                 back = await response.json()
-                console.log(response)
-                songs = back.tracks
-                document.getElementById("return").innerHTML = ""
-                songs.forEach(result => {
-                    console.log(result.back.albumOfTrack)
-                });
-            
+                console.log(back)
 
 
 
 
 
         }
+        search()
     }
 });
 
 const button = document.getElementById('btn');
 button.addEventListener('click', function handleClick() {
-    window.location.href = "http://127.0.0.1:5501/Trang%20Ch%C3%ADnh/index.html#"
+    window.location.href = "../Trang Chính/index.html"
 });

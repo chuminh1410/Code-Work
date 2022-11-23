@@ -120,3 +120,40 @@ const button1 = document.getElementById('btn1');
 button1.addEventListener('click', function handleClick() {
   window.location.href = "http://127.0.0.1:5501/Login/html%20login.html"
 });
+
+ window.onSpotifyWebPlaybackSDKReady = () => {
+    const token = '[BQAZDjUaEh6PWgAAdCd0LTdtgjPAePkWsl4iTyqbrqBHXDqx4Je8Hq24IYQvNpFhiIzhxT3YnDiaClkiQ17-9N1S4RZDV5X1sNmbVQKQdj6rPpRncYF-lLD658Etvv_TnIYgbP_9LDyo9oMvoPurvfFLasmeUbTHMEsqYqxeiQQCiYQHwKTCKnCjQrfIT5XFrGt2V90FsVpLk4jvUoUnq_o]';
+    const player = new Spotify.Player({
+        name: 'Web Playback SDK Quick Start Player',
+        getOAuthToken: cb => { cb(token); },
+        volume: 0.5
+    });
+
+    // Ready
+    player.addListener('ready', ({ device_id }) => {
+        console.log('Ready with Device ID', device_id);
+    });
+
+    // Not Ready
+    player.addListener('not_ready', ({ device_id }) => {
+        console.log('Device ID has gone offline', device_id);
+    });
+
+    player.addListener('initialization_error', ({ message }) => {
+        console.error(message);
+    });
+
+    player.addListener('authentication_error', ({ message }) => {
+        console.error(message);
+    });
+
+    player.addListener('account_error', ({ message }) => {
+        console.error(message);
+    });
+
+    document.getElementById('togglePlay').onclick = function() {
+      player.togglePlay();
+    };
+
+    player.connect();
+}
