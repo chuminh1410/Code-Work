@@ -14,7 +14,15 @@ const search = async () => {
 		.then(response => response.json())
 		.then(response => console.log(response))
 		.catch(err => console.error(err));
+<<<<<<< Updated upstream
 
+=======
+	
+	data = await response
+	console.log(data)
+
+	songs = data1.albums.items[0].data.artists.items[0].profile
+>>>>>>> Stashed changes
 
 
 		songs.forEach(element => {
