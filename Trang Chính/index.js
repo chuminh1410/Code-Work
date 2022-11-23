@@ -109,3 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+const button = document.getElementById('btn');
+
+button.addEventListener('click', function handleClick() {
+  window.location.href = "http://127.0.0.1:5501/search/index.html"
+});

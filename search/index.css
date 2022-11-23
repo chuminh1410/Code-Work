@@ -1,0 +1,139 @@
+html {
+    font-size: 16px;
+    background-color: gray;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: -0.35px;
+}
+
+::root {
+    --main-color: #1db954;
+    --light-color: #1ed760;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.sidebar {
+    background-color: rgba(4, 4, 4);
+    padding: 24px 24px 0 24px;
+    position: fixed;
+    height: 100%;
+    width: 230px;
+}
+
+.sidebar .brand {
+    padding-bottom: 18px;
+}
+
+.sidebar .brand svg {
+    width: 131px;
+}
+
+.sidebar .menu .menu--item {
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.sidebar .menu.menu-extra .menu--item:not(:first-child) {
+    margin-top: 5px;
+}
+
+.sidebar .menu .menu--item a,
+.sidebar .sidebar--download-app a {
+    text-decoration: none;
+    color: #B3B3B3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    transition: all 350ms;
+}
+
+.sidebar .menu.menu-extra .menu--item a img {
+    opacity: 0.7;
+    transition: all 350ms;
+}
+
+.sidebar .menu.menu-extra .menu--item:hover a img {
+    opacity: 1;
+}
+
+.sidebar .menu .menu--item.active a,
+.sidebar .menu .menu--item:hover a,
+.sidebar .sidebar--download-app:hover a {
+    color: #fff;
+}
+
+.sidebar .menu .menu--item.active:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 8px;
+    left: -16px;
+    right: -16px;
+    background: rgb(40, 40, 40);
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.menu--item--text,
+.sidebar--download-app a span {
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.sidebar--header {
+    margin-top: 24px;
+    margin-bottom: 20px;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    color: #B3B3B3;
+}
+
+.sidebar .separator {
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #303030;
+    margin-top: 16px;
+}
+
+.sidebar .menu.menu-playlist .menu--item--text {
+    font-weight: 400;
+    margin-left: 0;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar .menu.menu-playlist a {
+    cursor: default;
+}
+
+.sidebar--download-app {
+    position: absolute;
+    bottom: 0;
+}
+.searchbox {
+    background-color: transparent;
+}
+#search{
+    border: 3px solid black;
+    border-radius: 25px;
+    margin-left: 15% ;
+    margin-top: 40px;
+    width: 500px;
+    height: 40px;
+}
