@@ -114,3 +114,9 @@ const button = document.getElementById('btn');
 button.addEventListener('click', function handleClick() {
   window.location.href = "http://127.0.0.1:5501/search/index.html"
 });
+
+const button1 = document.getElementById('btn1');
+
+button1.addEventListener('click', function handleClick() {
+  window.location.href = "http://127.0.0.1:5501/Login/html%20login.html"
+});
